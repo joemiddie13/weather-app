@@ -26,13 +26,12 @@ function Weather() {
     try {
       const data = await fetchWeatherByZip(zipCode, selectedUnits);
       
-      // Check if the API returned an error
       if (data.cod !== 200) {
         throw new Error(data.message || 'Error fetching weather data');
       }
       
       setWeatherData(data);
-      console.log('Weather data:', data); // For debugging
+      console.log('Weather data:', data);
     } catch (err) {
       setError(err.message || 'Failed to fetch weather data');
       setWeatherData(null);
@@ -46,14 +45,25 @@ function Weather() {
       sx={{ 
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
-        py: 4
+        py: 4,
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <Container maxWidth="md">
+      <Container 
+        maxWidth="md" 
+        sx={{ 
+          width: '100%',
+          mx: 'auto',
+        }}
+      >
         <Box 
           sx={{ 
             my: 4,
-            perspective: '1000px'
+            perspective: '1000px',
+            width: '100%',
           }}
         >
           <Typography 
