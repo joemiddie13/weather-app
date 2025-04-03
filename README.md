@@ -2,7 +2,7 @@
 
 A modern React application that connects to the OpenWeatherMap API to display real-time weather data for any US zip code.
 
-![Weather App Screenshot](https://via.placeholder.com/800x400?text=Weather+App+Screenshot)
+<img width="922" alt="image" src="https://github.com/user-attachments/assets/af01ab89-69d6-4db9-806a-6a7f801ecd92" />
 
 ## Features
 
